@@ -10,10 +10,10 @@ jobs:
     test:
         runs-on: ubuntu-latest
         env:
-            MONGODB_USERNAME: faranbutt789
-            MONGODB_PASSWORD: n4W3cIhf3oQYknID 
+            MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+            MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
             MONGODB_CLUSTER_ADDRESS: cluster0.rvdrrpz.mongodb.net
-            PORT: 3000
+            PORT: 8080
         steps:
             - name: Get Code
               uses: actions/checkout@v4
