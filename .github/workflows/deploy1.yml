@@ -23,7 +23,7 @@ jobs:
                 path: ~/.npm
                 key: npm-deps-${{hashFiles('**/package-lock.json')}}
             - name: Install dependencies
-              uses: npm ci
+              run: npm ci
             - name: Run server
               run: npm start and npx wait-on http://127.0.0.1:$PORT
             - name: testing
